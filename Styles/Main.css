@@ -1,47 +1,55 @@
 #top-panel {
   height: 150px;
-  border: 1px solid black;
-}
-
-#top-panel #topp {
-  position: relative;
-  bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid black;
 }
 
-#top-panel #topp #logo-header {
+#top-panel #top-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+}
+
+#top-panel #top-left #logo-header {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 30px;
+  border: 1px solid black;
 }
 
-#top-panel #topp #logo-header h6 {
-  position: absolute;
-  top: 64px;
+#top-panel #top-left #logo-header h1 {
+  position: relative;
+  bottom: 20px;
+}
+
+#top-panel #top-left #logo-header h6 {
+  position: relative;
+  bottom: 84px;
   -ms-flex-item-align: start;
       align-self: flex-start;
   -webkit-text-decoration-line: overline;
           text-decoration-line: overline;
 }
 
-#top-panel #topp #info {
+#top-panel #top-left #info {
   font-size: 20px;
 }
 
-#top-panel #topp #info i {
+#top-panel #top-left #info i {
   position: relative;
   top: 50px;
   cursor: pointer;
 }
 
-#top-panel #topp #info i:hover {
+#top-panel #top-left #info i:hover {
   color: cadetblue;
 }
 
-#top-panel #topp #info #info-title {
+#top-panel #top-left #info #info-title {
   width: 100px;
   height: 80px;
   position: relative;
@@ -51,7 +59,28 @@
   border-radius: 6px;
 }
 
-#top-panel #topp #Directories {
+#top-panel #top-right {
+  position: relative;
+  top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+}
+
+#top-panel #top-right #top-top {
+  position: relative;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#top-panel #top-right #top-top #Directories {
   position: absolute;
   right: 100px;
   -ms-grid-row-align: center;
@@ -63,7 +92,7 @@
   border: 1px solid black;
 }
 
-#top-panel #topp #Directories .dir {
+#top-panel #top-right #top-top #Directories .dir {
   width: 180px;
   height: 42px;
   cursor: pointer;
@@ -77,32 +106,31 @@
   border-radius: 10px;
 }
 
-#top-panel #topp #Directories .dir:hover {
+#top-panel #top-right #top-top #Directories .dir:hover {
   background-color: cadetblue;
 }
 
-#top-panel #top-bottom {
+#top-panel #top-right #top-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  bottom: 50px;
-  left: 624px;
+  left: 148px;
 }
 
-#top-panel #top-bottom #search-bar #bar {
+#top-panel #top-right #top-bottom #search-bar #bar {
   width: 300px;
   height: 34px;
   font-size: 15px;
 }
 
-#top-panel #top-bottom #search-bar i {
+#top-panel #top-right #top-bottom #search-bar i {
   position: relative;
   right: 325px;
   cursor: pointer;
 }
 
-#top-panel #top-bottom #info-2 {
+#top-panel #top-right #top-bottom #info-2 {
   width: 300px;
   height: 35px;
   display: -webkit-box;
@@ -117,7 +145,7 @@
   border-radius: 20px 0 0 0;
 }
 
-#top-panel #top-bottom #info-2 i {
+#top-panel #top-right #top-bottom #info-2 i {
   position: relative;
   left: 10px;
   cursor: pointer;
@@ -127,16 +155,16 @@
   z-index: 9;
 }
 
-#top-panel #top-bottom #info-2 i:hover {
+#top-panel #top-right #top-bottom #info-2 i:hover {
   color: cadetblue;
 }
 
-#top-panel #top-bottom #info-2 #info-details {
+#top-panel #top-right #top-bottom #info-2 #info-details {
   position: relative;
   bottom: 6px;
 }
 
-#top-panel #top-bottom #info-2 #info-details #info-description {
+#top-panel #top-right #top-bottom #info-2 #info-details #info-description {
   font-size: 20px;
   cursor: default;
   -webkit-user-select: none;
@@ -148,7 +176,7 @@
   left: 25px;
 }
 
-#top-panel #top-bottom #info-2 #info-details #info-profile {
+#top-panel #top-right #top-bottom #info-2 #info-details #info-profile {
   position: relative;
   bottom: 25px;
   left: 25px;
@@ -161,14 +189,14 @@
   z-index: -1;
 }
 
-#top-panel #top-bottom #info-2 #info-details hr {
+#top-panel #top-right #top-bottom #info-2 #info-details hr {
   position: relative;
   bottom: 20px;
   left: 25px;
   z-index: -1;
 }
 
-#top-panel #top-bottom #info-2:hover {
+#top-panel #top-right #top-bottom #info-2:hover {
   -webkit-animation-name: info-2-transform;
           animation-name: info-2-transform;
   -webkit-animation-duration: 500ms;
@@ -216,7 +244,7 @@
   /*#side-content {
         height: 1200px;
 
-        border: 1px solid black;
+        border: $defB;
     }*/
   border: 1px solid black;
   background-color: white;
@@ -225,7 +253,7 @@
 
             display: flex;
 
-            border: 1px solid black;
+            border: $defB;
 
             #side-bar {
                 width: 35px;
@@ -235,7 +263,7 @@
 
                 font-size: 40px;
 
-                border: 1px solid black;
+                border: $defB;
                 border-radius: 10px 0 0 10px;
 
                 p {
@@ -256,7 +284,7 @@
                 width: 10px;
                 height: auto;
 
-                border: 1px solid black;
+                border: $defB;
             }
         }*/
 }
