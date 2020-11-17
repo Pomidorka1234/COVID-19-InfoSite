@@ -11,18 +11,18 @@ $defB: 1px solid black;
 
         display: flex;
 
-        border: $defB;
+        //border: $defB;
 
         #logo-header {
             width: fit-content;
 
             font-size: 30px;
 
-            border: $defB;
+            //border: $defB;
 
             h1 {
                 position: relative;
-                bottom: 20px;
+                bottom: 30px;
             }
 
             h6 {
@@ -41,7 +41,7 @@ $defB: 1px solid black;
     
             i {
                 position: relative;
-                top: 50px;
+                top: 25px;
     
                 cursor: pointer;
             }
@@ -55,7 +55,7 @@ $defB: 1px solid black;
                 height: 80px;
 
                 position: relative;
-                top: 50px;
+                top: 25px;
 
                 font-size: 10px;
 
@@ -67,35 +67,32 @@ $defB: 1px solid black;
 
     #top-right {
 
+        width: 100%;
+
         position: relative;
-        top: 100px;
 
         display: flex;
 
         flex-direction: column;
 
-        border: $defB;
+        row-gap: 20px;
+
+        //border: $defB;
 
         #top-top {
-
-            position: relative;
-            bottom: 30px;
     
             display: flex;
 
             //border: $defB;
         
             #Directories {
-    
-                //position: relative;
-                position: absolute;
-                right: 100px;
-                //left: 350px;
+
+                margin: auto;
     
                 align-self: center;
-        
-                display: grid;
-                grid-template-columns: 200px 200px;
+
+                display: flex;
+                column-gap: 10px;
     
                 border: $defB;
         
@@ -121,56 +118,59 @@ $defB: 1px solid black;
         }
     
         #top-bottom {
+
+            height: 100%;
             
             display: flex;
-    
-            position: relative;
-            left: 148px;
     
             //border: $defB;
             
             #search-bar {
+
+                display: flex;
+                flex-direction: row-reverse;
+
+                margin: auto;
+
+                border: 1px solid black;
     
                 #bar {
     
-                    width: 300px;
+                    width: 28vw;
                     height: 34px;
     
                     font-size: 15px;
     
                     //border: $defB;
     
-                    //z-index: 0;
-    
                 }
     
                 i {
-                    position: relative;
-                    right: 325px;
+                    margin: auto;
+
+                    font-size: 16px;
     
                     cursor: pointer;
-    
-                    //z-index: 1;
                 }
     
             }
     
             #info-2 {
-    
-                width: 300px;
+
+                width: 35%;
                 height: 35px;
     
                 display: flex;
     
                 position: relative;
-                //bottom: 0px;
-                top: 15px;
+                top: 46px;
     
                 font-size: 18px;
                 text-align: center;
     
                 border: $defB;
                 border-bottom: 0px;
+                border-right: 0px;
                 border-radius: 20px 0 0 0;
     
                 i {
@@ -238,8 +238,8 @@ $defB: 1px solid black;
             }
     
             @keyframes info-2-transform {
-                from  { height: 35px; position: relative; top: 15px; }
-                to { height: 75px; position: relative; top: -25px; }
+                from  { height: 35px; position: relative; top: 46px; }
+                to { height: 75px; position: relative; top: 7px; }
             }
         }
     }
@@ -251,18 +251,16 @@ $defB: 1px solid black;
 
     flex-direction: row-reverse;
 
-    //border: $defB;
+    border: $defB;
+    background-color: white;
+    
+    z-index: 2;
 
     /*#side-content {
         height: 1200px;
 
         border: $defB;
     }*/
-
-    border: $defB;
-    background-color: white;
-    
-    z-index: 2;
 
     #category-box {
 
@@ -319,58 +317,14 @@ $defB: 1px solid black;
 
     }
 
-    /*#right-side {
-
-            display: flex;
-
-            border: $defB;
-
-            #side-bar {
-                width: 35px;
-                height: 55px;
-
-                display: flex;
-
-                font-size: 40px;
-
-                border: $defB;
-                border-radius: 10px 0 0 10px;
-
-                p {
-                    margin: auto;
-
-                    text-align: center;
-                    line-height: 1px;
-                }
-            }
-
-            #side-bar:hover {
-                cursor: pointer;
-                color: cadetblue;
-
-            }
-
-            #category {
-                width: 10px;
-                height: auto;
-
-                border: $defB;
-            }
-        }*/
-
     #content {
         width: 1000px;
         height: max-content;
-
-        //display: flex;
     
         border: $defB;
         border-right: 0px;
 
-            //margin-left: 20px;
-            //margin-right: 20px;
-
-            //border: $defB;
+        //border: $defB;
 
             #content-top {
 
@@ -385,15 +339,13 @@ $defB: 1px solid black;
                     position: relative;
                     left: 20px;
     
-                    border: $defB;
+                    //border: $defB;
                 }
     
                 #sort {
                     height: min-content;
     
                     margin: auto;
-
-                    column-gap: 50px;
     
                     border: $defB;
     
