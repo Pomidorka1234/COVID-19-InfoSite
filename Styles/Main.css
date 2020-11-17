@@ -144,7 +144,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  top: 46px;
+  top: 48px;
   font-size: 18px;
   text-align: center;
   border: 1px solid black;
@@ -219,12 +219,12 @@
   from {
     height: 35px;
     position: relative;
-    top: 46px;
+    top: 48px;
   }
   to {
     height: 75px;
     position: relative;
-    top: 7px;
+    top: 8px;
   }
 }
 
@@ -232,12 +232,12 @@
   from {
     height: 35px;
     position: relative;
-    top: 46px;
+    top: 48px;
   }
   to {
     height: 75px;
     position: relative;
-    top: 7px;
+    top: 8px;
   }
 }
 

@@ -163,7 +163,7 @@ $defB: 1px solid black;
                 display: flex;
     
                 position: relative;
-                top: 46px;
+                top: 48px;
     
                 font-size: 18px;
                 text-align: center;
@@ -238,8 +238,8 @@ $defB: 1px solid black;
             }
     
             @keyframes info-2-transform {
-                from  { height: 35px; position: relative; top: 46px; }
-                to { height: 75px; position: relative; top: 7px; }
+                from  { height: 35px; position: relative; top: 48px; }
+                to { height: 75px; position: relative; top: 8px; }
             }
         }
     }
