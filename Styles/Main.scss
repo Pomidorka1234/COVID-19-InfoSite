@@ -1,38 +1,47 @@
+$defB: 1px solid black;
+
 #top-panel {
     height: 150px;
 
-    border: 1px solid black;
+    display: flex;
 
-    #topp {
+    border: $defB;
 
-        position: relative;
-        bottom: 30px;
+    #top-left {
 
         display: flex;
 
+        //border: $defB;
+
         #logo-header {
             width: fit-content;
-    
+
             font-size: 30px;
 
+            //border: $defB;
+
+            h1 {
+                position: relative;
+                bottom: 30px;
+            }
+
             h6 {
-                position: absolute;
-                top: 64px;
+                position: relative;
+                bottom: 84px;
 
                 align-self: flex-start;
 
                 text-decoration-line: overline;
-
             }
         }
     
         #info {
-    
+
             font-size: 20px;
     
             i {
                 position: relative;
-                top: 50px;
+                top: 25px;
     
                 cursor: pointer;
             }
@@ -46,170 +55,192 @@
                 height: 80px;
 
                 position: relative;
-                top: 50px;
+                top: 25px;
 
                 font-size: 10px;
 
-                border: 1px solid black;
+                border: $defB;
                 border-radius: 6px;
-            }
-        }
-    
-        #Directories {
-
-            //position: relative;
-            position: absolute;
-            right: 100px;
-            //left: 350px;
-
-            align-self: center;
-    
-            display: grid;
-            grid-template-columns: 200px 200px;
-
-            border: 1px solid black;
-    
-            .dir {
-                width: 180px;
-                height: 42px;
-
-                cursor: pointer;
-
-                user-select: none;
-
-                text-align: center;
-                font-size: 30px;
-
-                border: 1px solid black;
-                border-radius: 10px;
-            }
-
-            .dir:hover {
-                background-color: cadetblue;
             }
         }
     }
 
-    #top-bottom {
-        
-        display: flex;
+    #top-right {
+
+        width: 100%;
 
         position: relative;
-        bottom: 50px;
-        left: 624px;
 
-        
-        #search-bar {
+        display: flex;
 
-            #bar {
+        flex-direction: column;
 
-                width: 300px;
-                height: 34px;
+        row-gap: 20px;
 
-                font-size: 15px;
+        //border: $defB;
 
-                //border: 1px solid black;
-
-                //z-index: 0;
-
-            }
-
-            i {
-                position: relative;
-                right: 325px;
-
-                cursor: pointer;
-
-                //z-index: 1;
-            }
-
-        }
-
-        #info-2 {
-
-            width: 300px;
-            height: 35px;
-
+        #top-top {
+    
             display: flex;
 
-            position: relative;
-            //bottom: 0px;
-            top: 15px;
+            //border: $defB;
+        
+            #Directories {
 
-            font-size: 18px;
-            text-align: center;
-
-            border: 1px solid black;
-            border-bottom: 0px;
-            border-radius: 20px 0 0 0;
-
-            i {
-
-                position: relative;
-                left: 10px;
-                
-                cursor: pointer;
-
+                margin: auto;
+    
                 align-self: center;
 
-                z-index: 9;
-            }
-
-            i:hover {
-                color: cadetblue;
-            }
-
-            #info-details {
-
-                position: relative;
-                bottom: 6px;
-
-                #info-description {
-                    font-size: 20px;
+                display: flex;
+                column-gap: 10px;
     
-                    cursor: default;
+                border: $defB;
+        
+                .dir {
+                    width: 180px;
+                    height: 42px;
+    
+                    cursor: pointer;
     
                     user-select: none;
     
-                    position: relative;
-                    bottom: 5px;
-                    left: 25px;
+                    text-align: center;
+                    font-size: 30px;
+    
+                    border: $defB;
+                    border-radius: 10px;
                 }
-                
-                #info-profile {
-                    position: relative;
-                    bottom: 25px;
-                    left: 25px;
-
-                    align-self: center;
-
-                    display: flex;
-
-                    border: 1px solid black;
-
-                    z-index: -1;
-                }
-
-                hr {
-                    position: relative;
-                    bottom: 20px;
-                    left: 25px;
-
-                    z-index: -1;
+    
+                .dir:hover {
+                    background-color: cadetblue;
                 }
             }
         }
+    
+        #top-bottom {
 
-        #info-2:hover {
-            animation-name: info-2-transform;
-            animation-duration: 500ms;
-            animation-play-state: running;
-            animation-fill-mode: forwards;
-        }
+            height: 100%;
+            
+            display: flex;
+    
+            //border: $defB;
+            
+            #search-bar {
 
-        @keyframes info-2-transform {
-            from  { height: 35px; position: relative; top: 15px; }
-            to { height: 75px; position: relative; top: -25px; }
+                display: flex;
+                flex-direction: row-reverse;
+
+                margin: auto;
+
+                border: 1px solid black;
+    
+                #bar {
+    
+                    width: 28vw;
+                    height: 34px;
+    
+                    font-size: 15px;
+    
+                    //border: $defB;
+    
+                }
+    
+                i {
+                    margin: auto;
+
+                    font-size: 16px;
+    
+                    cursor: pointer;
+                }
+    
+            }
+    
+            #info-2 {
+
+                width: 35%;
+                height: 35px;
+    
+                display: flex;
+    
+                position: relative;
+                top: 48px;
+    
+                font-size: 18px;
+                text-align: center;
+    
+                border: $defB;
+                border-bottom: 0px;
+                border-right: 0px;
+                border-radius: 20px 0 0 0;
+    
+                i {
+    
+                    position: relative;
+                    left: 10px;
+                    
+                    cursor: pointer;
+    
+                    align-self: center;
+    
+                    z-index: 9;
+                }
+    
+                i:hover {
+                    color: cadetblue;
+                }
+    
+                #info-details {
+
+                    position: relative;
+                    bottom: 6px;
+    
+                    #info-description {
+                        font-size: 20px;
+        
+                        cursor: default;
+        
+                        user-select: none;
+        
+                        position: relative;
+                        bottom: 5px;
+                        left: 25px;
+                    }
+                    
+                    #info-profile {
+                        position: relative;
+                        bottom: 25px;
+                        left: 25px;
+    
+                        align-self: center;
+    
+                        display: flex;
+    
+                        border: $defB;
+    
+                        z-index: -1;
+                    }
+    
+                    hr {
+                        position: relative;
+                        bottom: 20px;
+                        left: 25px;
+    
+                        z-index: -1;
+                    }
+                }
+            }
+    
+            #info-2:hover {
+                animation-name: info-2-transform;
+                animation-duration: 500ms;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+            }
+    
+            @keyframes info-2-transform {
+                from  { height: 35px; position: relative; top: 48px; }
+                to { height: 75px; position: relative; top: 8px; }
+            }
         }
     }
 }
@@ -220,24 +251,22 @@
 
     flex-direction: row-reverse;
 
-    //border: 1px solid black;
+    border: $defB;
+    background-color: white;
+    
+    z-index: 2;
 
     /*#side-content {
         height: 1200px;
 
-        border: 1px solid black;
+        border: $defB;
     }*/
-
-    border: 1px solid black;
-    background-color: white;
-    
-    z-index: 2;
 
     #category-box {
 
         display: flex;
 
-        border: 1px solid black;
+        border: $defB;
         border-left: 0px;
 
         #side-bar {
@@ -248,7 +277,7 @@
 
             font-size: 40px;
 
-            border: 1px solid black;
+            border: $defB;
             border-radius: 10px 0 0 10px;
 
             p {
@@ -268,7 +297,7 @@
             width: 0px;
             height: auto;
 
-            border: 1px solid black;
+            border: $defB;
             border-right: 0px;
 
             animation-duration: 100ms;
@@ -288,58 +317,14 @@
 
     }
 
-    /*#right-side {
-
-            display: flex;
-
-            border: 1px solid black;
-
-            #side-bar {
-                width: 35px;
-                height: 55px;
-
-                display: flex;
-
-                font-size: 40px;
-
-                border: 1px solid black;
-                border-radius: 10px 0 0 10px;
-
-                p {
-                    margin: auto;
-
-                    text-align: center;
-                    line-height: 1px;
-                }
-            }
-
-            #side-bar:hover {
-                cursor: pointer;
-                color: cadetblue;
-
-            }
-
-            #category {
-                width: 10px;
-                height: auto;
-
-                border: 1px solid black;
-            }
-        }*/
-
     #content {
         width: 1000px;
         height: max-content;
-
-        //display: flex;
     
-        border: 1px solid black;
+        border: $defB;
         border-right: 0px;
 
-            //margin-left: 20px;
-            //margin-right: 20px;
-
-            //border: 1px solid black;
+        //border: $defB;
 
             #content-top {
 
@@ -347,24 +332,22 @@
 
                 column-gap: 600px;
     
-                //border: 1px solid black;
+                //border: $defB;
     
                 h2 {
     
                     position: relative;
                     left: 20px;
     
-                    border: 1px solid black;
+                    //border: $defB;
                 }
     
                 #sort {
                     height: min-content;
     
                     margin: auto;
-
-                    column-gap: 50px;
     
-                    border: 1px solid black;
+                    border: $defB;
     
                     p {
                         margin: auto;
@@ -394,7 +377,7 @@
 
     cursor: pointer;
 
-    border: 1px solid black;
+    border: $defB;
     border-radius: 4px;
 
     .options {
@@ -407,7 +390,7 @@
 
         margin: auto;
 
-        //border: 1px solid black;
+        //border: $defB;
 
         .search-options {
 
@@ -416,7 +399,7 @@
             .fa-search {
                 font-size: 60px;
 
-                //border: 1px solid black;
+                //border: $defB;
             }
             .fa-search:hover {
                 color: rgb(86, 121, 122);
@@ -434,7 +417,7 @@
 
             position: absolute;
 
-            border: 1px solid black;
+            border: $defB;
             border-radius: 6px;
             background-color: white;
 
@@ -454,7 +437,7 @@
             .fa-cog {
                 font-size: 60px;
 
-                //border: 1px solid black;
+                //border: $defB;
             }
 
             .fa-cog:hover {
@@ -472,7 +455,7 @@
 
             position: absolute;
 
-            border: 1px solid black;
+            border: $defB;
             border-radius: 6px;
             background-color: white;
         }
@@ -486,7 +469,7 @@
 
         display: flex;
 
-        //border: 1px solid black;
+        //border: $defB;
 
         .information-box {
 
@@ -495,7 +478,7 @@
             text-align: center;
             line-height: 25px;
 
-            //border: 1px solid black;
+            //border: $defB;
         }
     }
 
@@ -505,7 +488,7 @@
 
         margin: auto;
 
-        //border: 1px solid black;
+        //border: $defB;
         background-size: contain;
         background-position-y: center;
         background-repeat: no-repeat;
