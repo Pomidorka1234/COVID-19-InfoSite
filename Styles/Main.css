@@ -490,7 +490,7 @@
   background-repeat: no-repeat;
 }
 
-.section:not(.information):hover {
+.section:hover {
   background-color: lavender;
 }
 /*# sourceMappingURL=Main.css.map */

@@ -90,6 +90,7 @@ class Section extends React.Component {
         this.toggleOptions = this.toggleOptions.bind(this);
         this.toggleSection = this.toggleSection.bind(this);
         this.toggleSettings = this.toggleSettings.bind(this);
+        this.openSection = this.openSection.bind(this);
     }
 
     toggleOptions() {
@@ -136,9 +137,13 @@ class Section extends React.Component {
         $("#" + this.props.sectionID + "content-settings-box").toggle();
     }
 
+    openSection() {
+        
+    }
+
     render() {
         return (
-            <div id={this.props.sectionID} className='section'>
+            <div id={this.props.sectionID} className='section' onClick={this.openSection}>
                 <div id={this.props.sectionID + "-options"} className='options'>
                     <div id={this.props.sectionID + "-search-options"} className='search-options'>
                         <i className="fas fa-search" title="search" onClick={this.toggleOptions}></i>
@@ -249,25 +254,3 @@ setInterval(function() {
         $(".options").css("display", "flex");
     }
 }, 0);
-
-
-
-//sidenotes <Section mediaID='CNN.pn' info={"Cable News Network (CNN) is an American news-based pay television channel owned by CNN Worldwide, a unit of the WarnerMedia News & Sports division of AT&T's WarnerMedia."} />
-//<Section mediaID='MSNBC.pn' info={"MSNBC is an American news-based pay television cable channel, owned by the NBCUniversal News Group division of NBCUniversal (a subsidiary of Comcast). It provides NBC News coverage as well as its own reporting and political commentary on current events."} />
-//<Section mediaID='FCFC.pn' info={"Fact checking the fact checkers & trying to give the public the precise data and facts that might contradict what fact checking sites such as Snopes, Politifacts or others web sites alike might claim"} />
-
-
-
-/*
-<Section sectionID='S0' mediaID='E20.pn' info={"The 2020 United States presidential election was held on Tuesday, November 3, 2020. It is the 59th quadrennial presidential election. Voters select presidential electors who in turn will vote on December 14, 2020, to either elect a new president and vice president or reelect the incumbents Donald Trump and Mike Pence respectively"} />
-<Section sectionID='S1' mediaID='Orange.pn' info={"Donald John Trump (born June 14, 1946) is the 45th and current president of the United States. Before entering politics, he was a businessman and television personality, currently running for the republican party"} />
-<Section sectionID='S2' mediaID='Sleepy.pn' info={"Joseph Robinette Biden Jr. Biden is an American politician who served as the 47th vice president of the United States in the Obama administration from 2009 to 2017. A member of the Democratic Party, he served as United States Senator for Delaware from 1973 to 2009. He is the Democratic presidential nominee for the 2020 election, running against the incumbent, Donald Trump."} />
-<Section sectionID='S3' mediaID='BLM.pn' info={"Black Lives Matter (BLM) is a decentralized political and social movement advocating for non-violent civil disobedience in protest against incidents of police brutality and all racially motivated violence against black people"} />
-<Section sectionID='S4' mediaID='IW.pn' info={"InfoWars is an American far-right, conspiracy theory, and fake news website owned by Alex Jones. It was founded in 1999, and operates under Free Speech Systems LLC"} />
-<Section sectionID='S5' mediaID='WHO.jp' info={"The World Health Organization (WHO) is a specialized agency of the United Nations responsible for international public health."} />
-<Section sectionID='S6' mediaID='CDC.pn' info={"The Centers for Disease Control and Prevention (CDC) is a national public health institute in the United States. It is a United States federal agency, under the Department of Health and Human Services, and is headquartered in Atlanta, Georgia."} />
-<Section sectionID='S7' mediaID='FNC.pn' info={"Fox News (officially Fox News Channel, abbreviated FNC and commonly known as Fox) is an American multinational conservative cable news television channel. It is owned by Fox News Media, which itself is owned by the Fox Corporation"} />
-<Section sectionID='S8' mediaID='CNN.pn' info={"Cable News Network (CNN) is an American news-based pay television channel owned by CNN Worldwide, a unit of the WarnerMedia News & Sports division of AT&T's WarnerMedia."} />
-<Section sectionID='S9' mediaID='CBS.sv' info={"The Columbia Broadcasting System (CBS) is an American commercial broadcast television and radio network owned by ViacomCBS through its CBS Entertainment Group division. The network is headquartered at the CBS Building in New York City, with major production facilities and operations in New York City (at the CBS Broadcast Center) and Los Angeles (at CBS Television City and the CBS Studio Center)"} />
-<Section sectionID='S10' mediaID='MSNBC.pn' info={"MSNBC is an American news-based pay television cable channel, owned by the NBCUniversal News Group division of NBCUniversal (a subsidiary of Comcast). It provides NBC News coverage as well as its own reporting and political commentary on current events."} />
-*/                    
