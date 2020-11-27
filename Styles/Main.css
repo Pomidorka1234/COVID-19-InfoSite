@@ -13,9 +13,7 @@
 }
 
 #top-panel #top-left #logo-header {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 325px;
   font-size: 30px;
 }
 

@@ -14,7 +14,7 @@ $defB: 1px solid black;
         //border: $defB;
 
         #logo-header {
-            width: fit-content;
+            width: 325px;
 
             font-size: 30px;
 
@@ -23,6 +23,8 @@ $defB: 1px solid black;
             h1 {
                 position: relative;
                 bottom: 30px;
+
+                //border: $defB;
             }
 
             h6 {
@@ -32,6 +34,8 @@ $defB: 1px solid black;
                 align-self: flex-start;
 
                 text-decoration-line: overline;
+
+                //border: $defB;
             }
         }
     
