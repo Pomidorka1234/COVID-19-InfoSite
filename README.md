@@ -1,4 +1,6 @@
 # COVID-19-InfoSite 
+[![License](https://img.shields.io/badge/License-MIT%20License-brightgreen)]()
+
 ## COVID-19-InfoSite contains in it files and scripts of our website named "Deboonk"
 
 
