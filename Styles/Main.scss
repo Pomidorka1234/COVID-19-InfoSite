@@ -45,6 +45,7 @@ $defB: 1px solid black;
     
             i {
                 position: relative;
+                right: 60px;
                 top: 25px;
     
                 cursor: pointer;
@@ -87,13 +88,11 @@ $defB: 1px solid black;
     
             display: flex;
 
-            //border: $defB;
+            border: $defB;
         
             #Directories {
 
                 margin: auto;
-    
-                align-self: center;
 
                 display: flex;
                 column-gap: 10px;
@@ -127,7 +126,7 @@ $defB: 1px solid black;
             
             display: flex;
     
-            //border: $defB;
+            border: $defB;
             
             #search-bar {
 

@@ -37,6 +37,7 @@
 
 #top-panel #top-left #info i {
   position: relative;
+  right: 60px;
   top: 25px;
   cursor: pointer;
 }
@@ -72,12 +73,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid black;
 }
 
 #top-panel #top-right #top-top #Directories {
   margin: auto;
-  -ms-flex-item-align: center;
-      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +109,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid black;
 }
 
 #top-panel #top-right #top-bottom #search-bar {
