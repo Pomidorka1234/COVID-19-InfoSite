@@ -45,6 +45,7 @@ $defB: 1px solid black;
     
             i {
                 position: relative;
+                right: 60px;
                 top: 25px;
     
                 cursor: pointer;
@@ -92,8 +93,6 @@ $defB: 1px solid black;
             #Directories {
 
                 margin: auto;
-    
-                align-self: center;
 
                 display: flex;
                 column-gap: 10px;
