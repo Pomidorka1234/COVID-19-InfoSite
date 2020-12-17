@@ -10,6 +10,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  left: 20px;
 }
 
 #top-panel #top-left #logo-header {
@@ -70,24 +72,24 @@
 }
 
 #top-panel #top-right #top-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  direction: rtl;
 }
 
 #top-panel #top-right #top-top #Directories {
-  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   border: 1px solid black;
 }
 
 #top-panel #top-right #top-top #Directories .dir {
   width: 180px;
-  height: 42px;
+  height: 40px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -108,6 +110,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
 }
 
 #top-panel #top-right #top-bottom #search-bar {
@@ -123,7 +127,7 @@
 }
 
 #top-panel #top-right #top-bottom #search-bar #bar {
-  width: 28vw;
+  width: 38vw;
   height: 34px;
   font-size: 15px;
 }
@@ -141,7 +145,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  top: 48px;
+  top: 50px;
   font-size: 18px;
   text-align: center;
   border: 1px solid black;
@@ -230,12 +234,12 @@
   from {
     height: 35px;
     position: relative;
-    top: 48px;
+    top: 52px;
   }
   to {
     height: 75px;
     position: relative;
-    top: 8px;
+    top: 12px;
   }
 }
 
@@ -243,12 +247,12 @@
   from {
     height: 35px;
     position: relative;
-    top: 48px;
+    top: 52px;
   }
   to {
     height: 75px;
     position: relative;
-    top: 8px;
+    top: 12px;
   }
 }
 

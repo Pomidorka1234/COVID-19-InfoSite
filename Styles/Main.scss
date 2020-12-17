@@ -11,9 +11,13 @@ $defB: 1px solid black;
 
         display: flex;
 
+        position: relative;
+        left: 20px;
+
         //border: $defB;
 
         #logo-header {
+
             width: 325px;
 
             font-size: 30px;
@@ -85,23 +89,24 @@ $defB: 1px solid black;
         //border: $defB;
 
         #top-top {
-    
-            display: flex;
+
+            direction: rtl;
 
             //border: $defB;
         
             #Directories {
+                width: fit-content;
 
-                margin: auto;
+                //margin: auto;
 
                 display: flex;
-                column-gap: 10px;
+                column-gap: 20px;
     
                 border: $defB;
         
                 .dir {
                     width: 180px;
-                    height: 42px;
+                    height: 40px;
     
                     cursor: pointer;
     
@@ -125,6 +130,8 @@ $defB: 1px solid black;
             height: 100%;
             
             display: flex;
+
+            column-gap: 50px;
     
             //border: $defB;
             
@@ -139,7 +146,7 @@ $defB: 1px solid black;
     
                 #bar {
     
-                    width: 28vw;
+                    width: 38vw;
                     height: 34px;
     
                     font-size: 15px;
@@ -166,7 +173,7 @@ $defB: 1px solid black;
                 display: flex;
     
                 position: relative;
-                top: 48px;
+                top: 50px;
     
                 font-size: 18px;
                 text-align: center;
@@ -252,8 +259,8 @@ $defB: 1px solid black;
             }
     
             @keyframes info-2-transform {
-                from  { height: 35px; position: relative; top: 48px; }
-                to { height: 75px; position: relative; top: 8px;}
+                from  { height: 35px; position: relative; top: 52px; }
+                to { height: 75px; position: relative; top: 12px;}
             }
         }
     }
