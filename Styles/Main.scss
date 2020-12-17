@@ -45,6 +45,7 @@ $defB: 1px solid black;
     
             i {
                 position: relative;
+                right: 60px;
                 top: 25px;
     
                 cursor: pointer;
@@ -92,8 +93,6 @@ $defB: 1px solid black;
             #Directories {
 
                 margin: auto;
-    
-                align-self: center;
 
                 display: flex;
                 column-gap: 10px;
@@ -176,7 +175,7 @@ $defB: 1px solid black;
                 border-bottom: 0px;
                 border-right: 0px;
                 border-radius: 20px 0 0 0;
-    
+
                 i {
     
                     position: relative;
@@ -186,7 +185,7 @@ $defB: 1px solid black;
     
                     align-self: center;
     
-                    z-index: 9;
+                    z-index: 5;
                 }
     
                 i:hover {
@@ -219,17 +218,28 @@ $defB: 1px solid black;
     
                         display: flex;
     
-                        border: $defB;
-    
-                        z-index: -1;
+                        //border: $defB;
+
+                        div {
+                            position: relative;
+
+                            margin: auto;
+
+                            cursor: pointer;
+
+                            color: navy;
+                            text-decoration-line: underline;
+
+                            user-select: none;
+                        }
+
+                        div:hover { color: royalblue; }
                     }
     
                     hr {
                         position: relative;
                         bottom: 20px;
                         left: 25px;
-    
-                        z-index: -1;
                     }
                 }
             }
@@ -243,7 +253,7 @@ $defB: 1px solid black;
     
             @keyframes info-2-transform {
                 from  { height: 35px; position: relative; top: 48px; }
-                to { height: 75px; position: relative; top: 8px; }
+                to { height: 75px; position: relative; top: 8px;}
             }
         }
     }
@@ -251,20 +261,22 @@ $defB: 1px solid black;
 
 #bottom {
 
+    position: relative;
+
     display: flex;
 
     flex-direction: row-reverse;
 
     border: $defB;
     background-color: white;
-    
-    z-index: 2;
 
     /*#side-content {
         height: 1200px;
 
         border: $defB;
     }*/
+
+    z-index: 2;
 
     #category-box {
 
@@ -329,37 +341,37 @@ $defB: 1px solid black;
         border-right: 0px;
 
         //border: $defB;
+        //background-color: silver;
 
-            #content-top {
+        #content-top {
 
-                display: flex;
+            display: flex;
 
-                column-gap: 600px;
+            column-gap: 600px;
+    
+            //border: $defB;
+    
+            h2 {
+    
+                position: relative;
+                left: 20px;
     
                 //border: $defB;
+            }
     
-                h2 {
+            #sort {
+                height: min-content;
+
+                margin: auto;
     
-                    position: relative;
-                    left: 20px;
+                border: $defB;
     
-                    //border: $defB;
-                }
-    
-                #sort {
-                    height: min-content;
-    
+                p {
                     margin: auto;
-    
-                    border: $defB;
-    
-                    p {
-                        margin: auto;
-                        text-align: center;
-                    }
+                    text-align: center;
                 }
             }
-
+        }
     }
 }
 
