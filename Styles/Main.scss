@@ -317,7 +317,7 @@ $defB: 1px solid black;
         }
 
         #category {
-            width: 0px;
+            width: 0;
             height: auto;
 
             border: $defB;
@@ -326,6 +326,27 @@ $defB: 1px solid black;
             animation-duration: 100ms;
             animation-play-state: running;
             animation-fill-mode: forwards;
+
+            .category-element {
+                width: 99%;
+                height: 40px;
+
+                margin: auto;
+
+                //border: $defB;
+                background-color: yellow;
+
+                div {
+                    margin: auto;
+                    padding: auto;
+                    padding-top: 8px;
+
+                    text-align: center;
+                    font-size: 20px;
+
+                    cursor: pointer;
+                }
+            }
         }
 
         @keyframes category-show {
