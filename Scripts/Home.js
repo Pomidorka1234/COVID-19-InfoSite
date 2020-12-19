@@ -5,7 +5,6 @@ let infoList = [
         title: "The 2020 US presidential election",
         information: "The 2020 United States presidential election was held on Tuesday, November 3, 2020. It is the 59th quadrennial presidential election. Voters select presidential electors who in turn will vote on December 14, 2020, to either elect a new president and vice president or reelect the incumbents Donald Trump and Mike Pence respectively",
         ext: "png"
-
     },
     {
         sectionID: "S1",
@@ -77,7 +76,17 @@ let infoList = [
         information: "MSNBC is an American news-based pay television cable channel, owned by the NBCUniversal News Group division of NBCUniversal (a subsidiary of Comcast). It provides NBC News coverage as well as its own reporting and political commentary on current events",
         ext: "png"
     },
-]; //Make a database later on
+]; // Make a database later on
+
+let categoryList = [
+    {
+        id: "C0",
+        title: "",
+        background: ""
+    }
+];
+
+/** 'Section' class made of a fact checking linked box */
 
 class Section extends React.Component {
     constructor(props) {
@@ -133,6 +142,7 @@ class Section extends React.Component {
         });
     }
 
+    
     toggleSettings() {
         $("#" + this.props.sectionID + "content-settings-box").toggle();
     }
@@ -173,6 +183,7 @@ class Section extends React.Component {
     
 }
 
+/** 'Directory' Class containing Sections */
 class Directory extends React.Component {
     constructor(props) {
         super(props);
@@ -196,7 +207,8 @@ class Directory extends React.Component {
     }
 }
 
-class Category extends React.Component {
+/** 'Categories' component containing Categories */
+class Categories extends React.Component {
     constructor(props) {
         super(props);
 
@@ -206,13 +218,24 @@ class Category extends React.Component {
     }
 
     render() {
-        //return (
-
-        //);
+        return (
+            <div id='category-part' >
+                { categoryList.map(C => <Category id={"category-part-" + C.id} title={C.title}></Category>) }
+            </div>
+        );
     }
 }
 
+/** 'Category' stateless component, part of the category-box */
+const Category = (props) => {
+    return (
+        <div className='category-element' style={{backgroundImage: "linear-gradient(-45deg, green, red, blue, yellow)"}}>
+            <div>{props.title}</div>
+        </div>
+    );
+}
 
+ReactDOM.render(<Categories />, document.getElementById('category'));
 ReactDOM.render(<Directory />, document.getElementById('content-main'));
 
 //=============================================================================================================================================================================================
@@ -224,7 +247,7 @@ $("#main-info-circle").on('click', function () {
 });
 
 $("#side-bar").on('click', function() {
-    if ($("#category").css("width") == "0px") {
+    if ($("#category").css("width") <= "10px") {
         $("#category").css("animation-name", "category-show");
         $("#category").css("animation-fill-mode", "forwards");
         $(".fa-caret-left").removeClass("fa-caret-left").addClass("fa-caret-right");
