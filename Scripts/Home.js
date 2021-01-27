@@ -245,6 +245,9 @@ $("#main-info-circle").on('click', function () {
     $("#info-title").css("visibility", "visible") :
     $("#info-title").css("visibility", "hidden");
 });
+$("#main-info-circle-i").on("click", function() {
+    $("#info-title").css("visibility", "hidden");
+});
 
 $("#side-bar").on('click', function() {
     if ($("#category").css("width") <= "10px") {

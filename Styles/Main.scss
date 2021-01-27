@@ -60,16 +60,44 @@ $defB: 1px solid black;
             }
 
             #info-title {
-                width: 100px;
-                height: 80px;
+                width: 300px;
+                height: 240px;
 
-                position: relative;
-                top: 25px;
+                position: fixed;
+                left: 50%;
+                top: 50%;
 
-                font-size: 10px;
+                margin: auto;
+                margin: -150px 0 0 -150px;  
 
-                border: $defB;
+                border: 5px solid silver;
                 border-radius: 6px;
+                background-color: paleturquoise;
+
+                z-index: 3;
+
+                #info-title-p {
+                    width: 250px;
+
+                    position: relative;
+                    top: 52px;
+
+                    margin: auto;
+
+                    font-size: 20px;
+                    text-align: center;
+
+                    //border: $defB;
+                }
+
+                i {
+                    margin-left: 135px;
+                    margin-top: -140px;
+
+                    position: fixed;
+                    left: 50%;
+                    top: 50%;
+                }
             }
         }
     }
@@ -192,7 +220,7 @@ $defB: 1px solid black;
     
                     align-self: center;
     
-                    z-index: 5;
+                    z-index: 2;
                 }
     
                 i:hover {
@@ -283,7 +311,7 @@ $defB: 1px solid black;
         border: $defB;
     }*/
 
-    z-index: 2;
+    z-index: 1;
 
     #category-box {
 
