@@ -144,7 +144,6 @@
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   margin: auto;
-  border: 1px solid black;
 }
 
 #top-panel #top-right #top-bottom #search-bar #bar {
@@ -155,12 +154,13 @@
 
 #top-panel #top-right #top-bottom #search-bar i {
   margin: auto;
+  margin-right: 10px;
   font-size: 16px;
   cursor: pointer;
 }
 
 #top-panel #top-right #top-bottom #info-2 {
-  width: 35%;
+  width: 30%;
   height: 35px;
   display: -webkit-box;
   display: -ms-flexbox;

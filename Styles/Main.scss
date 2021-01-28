@@ -170,7 +170,7 @@ $defB: 1px solid black;
 
                 margin: auto;
 
-                border: 1px solid black;
+                //border: $defB;
     
                 #bar {
     
@@ -185,6 +185,7 @@ $defB: 1px solid black;
     
                 i {
                     margin: auto;
+                    margin-right: 10px;
 
                     font-size: 16px;
     
@@ -195,7 +196,7 @@ $defB: 1px solid black;
     
             #info-2 {
 
-                width: 35%;
+                width: 30%;
                 height: 35px;
     
                 display: flex;

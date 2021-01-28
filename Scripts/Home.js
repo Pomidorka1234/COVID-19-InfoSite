@@ -31,7 +31,7 @@ let infoList = [
         sectionID: "S4",
         mediaID: "IW",
         title: "InfoWars - American far-right conspiracy theory website",
-        information: "InfoWars is an American far-right, conspiracy theory, and fake news website owned by Alex Jones. It was founded in 1999, and operates under Free Speech Systems LLC",
+        information: "InfoWars is an American far-right, and conspiracy theory website owned by Alex Jones. It was founded in 1999, and operates under Free Speech Systems LLC",
         ext: "png"
     },
     {
@@ -100,6 +100,7 @@ class Section extends React.Component {
         this.toggleSection = this.toggleSection.bind(this);
         this.toggleSettings = this.toggleSettings.bind(this);
         this.openSection = this.openSection.bind(this);
+        this.removeSection = this.removeSection.bind(this);
     }
 
     toggleOptions() {
@@ -151,6 +152,11 @@ class Section extends React.Component {
         
     }
 
+    removeSection(match) {
+        if (findVariance(match, this.props.information))
+            $("#" + this.props.sectionID).css("visibility", "hidden");
+    }
+
     render() {
         return (
             <div id={this.props.sectionID} className='section' onClick={this.openSection}>
@@ -191,22 +197,43 @@ class Directory extends React.Component {
         this.state = {
             hidden: false
         }
+
+        this.removeSection = this.removeSection.bind(this);
+    }
+
+    removeSection(match) {
+        findVariance(match, this.props.information);
     }
 
     render() {
+        function iter() {
+            let r = [];
+            for (let i = 0; i < infoList.length; i++) {
+                r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>)
+            }
+            return r;
+        }
         return (
             <div className='directory-content'>
                 <div className='dir-settings'>
 
                 </div>
                 <div className='dir-content'>
-                    { infoList.map(S => <Section sectionID={S.sectionID} mediaID={S.mediaID} title={S.title} information={S.information} ext={S.ext}></Section>) }
+                {
+                    function iter() {
+                        let r = [];
+                        for (let i = 0; i < infoList.length; i++) {
+                            r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>)
+                        }
+                        return r;
+                    }()
+                }
                 </div>
             </div>
         );
     }
 }
-
+ //infoList.map(S => <Section sectionID={S.sectionID} mediaID={S.mediaID} title={S.title} information={S.information} ext={S.ext}></Section>)
 /** 'Categories' component containing Categories */
 class Categories extends React.Component {
     constructor(props) {
