@@ -4,7 +4,7 @@
  * @param {String} sentence the sentence to find the match in
  * @returns {Boolean} whether the match variant is found in the sentence
  */
-export function findVariance(match, sentence) {
+function findVariance(match, sentence) {
     for(let i = 0; i < sentence.length; i++) {
         if (sentence[i] == match[0]) {
             for (let j = 1; j < match.length; j++) {
@@ -19,4 +19,8 @@ export function findVariance(match, sentence) {
         }
     }
     return false;
+}
+
+export function addNumbers(a, b) {
+    alert(a + b);
 }

@@ -302,6 +302,6 @@ setInterval(function() {
     }
 }, 0);
 
-import {findVariance as findVar} from './BasicMethods.js';
+import addNumbers from './BasicMethods.js';
 
-alert(findVar("election", "election"));
+addNumbers(2, 2);
