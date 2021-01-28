@@ -202,17 +202,10 @@ class Directory extends React.Component {
     }
 
     removeSection(match) {
-        findVariance(match, this.props.information);
+        findVariance(match, sentence);
     }
 
     render() {
-        function iter() {
-            let r = [];
-            for (let i = 0; i < infoList.length; i++) {
-                r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>)
-            }
-            return r;
-        }
         return (
             <div className='directory-content'>
                 <div className='dir-settings'>
@@ -223,7 +216,8 @@ class Directory extends React.Component {
                     function iter() {
                         let r = [];
                         for (let i = 0; i < infoList.length; i++) {
-                            r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>)
+                            //if (findVariance("election", "election"))
+                                r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>);
                         }
                         return r;
                     }()
@@ -233,7 +227,7 @@ class Directory extends React.Component {
         );
     }
 }
- //infoList.map(S => <Section sectionID={S.sectionID} mediaID={S.mediaID} title={S.title} information={S.information} ext={S.ext}></Section>)
+
 /** 'Categories' component containing Categories */
 class Categories extends React.Component {
     constructor(props) {
@@ -307,3 +301,7 @@ setInterval(function() {
         $(".options").css("display", "flex");
     }
 }, 0);
+
+import {findVariance} from './BasicMethods.js';
+
+alert(findVariance("election", "election"));
