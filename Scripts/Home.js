@@ -103,6 +103,14 @@ class Section extends React.Component {
         this.removeSection = this.removeSection.bind(this);
     }
 
+    componentDidMount() {
+        document.addEventListener('keydown', this.removeSection);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.removeSection);
+    }
+
     toggleOptions() {
         this.state.visible ?
             $("#" + this.props.sectionID + "search-options-box").toggle() :
@@ -152,9 +160,9 @@ class Section extends React.Component {
         
     }
 
-    removeSection(match) {
-        if (findVariance(match, this.props.information))
-            $("#" + this.props.sectionID).css("visibility", "hidden");
+    removeSection() {
+        //if (findVariance($("#bar").text()), this.props.information))
+            //$("#" + this.props.sectionID).css("visibility", "hidden");
     }
 
     render() {
@@ -201,9 +209,20 @@ class Directory extends React.Component {
         this.removeSection = this.removeSection.bind(this);
     }
 
-    removeSection(match) {
-        findVariance(match, sentence);
-    }
+    //componentDidMount() {
+        //document.addEventListener('keydown', this.removeSection);
+    //}
+
+    //componentWillUnmount() {
+        //document.removeEventListener('keydown', this.removeSection);
+    //}
+
+    //removeSection(match) {
+        //for (let i = 0; i < infoList.length; i++) {
+            //if (findVariance(match, infoList[i].information) || findVariance(match, infoList[i].title))
+                
+        //}
+    //}
 
     render() {
         return (
@@ -216,8 +235,7 @@ class Directory extends React.Component {
                     function iter() {
                         let r = [];
                         for (let i = 0; i < infoList.length; i++) {
-                            //if (findVariance("election", "election"))
-                                r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>);
+                            r.push(<Section sectionID={infoList[i].sectionID} mediaID={infoList[i].mediaID} title={infoList[i].title} information={infoList[i].information} ext={infoList[i].ext}></Section>);
                         }
                         return r;
                     }()
@@ -301,7 +319,3 @@ setInterval(function() {
         $(".options").css("display", "flex");
     }
 }, 0);
-
-import addNumbers from './BasicMethods.js';
-
-addNumbers(2, 2);

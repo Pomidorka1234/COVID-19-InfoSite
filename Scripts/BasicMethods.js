@@ -20,7 +20,3 @@ function findVariance(match, sentence) {
     }
     return false;
 }
-
-export function addNumbers(a, b) {
-    alert(a + b);
-}
