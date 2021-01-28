@@ -302,6 +302,6 @@ setInterval(function() {
     }
 }, 0);
 
-import {findVariance} from './BasicMethods.js';
+import {findVariance as findVar} from './BasicMethods.js';
 
-alert(findVariance("election", "election"));
+alert(findVar("election", "election"));
