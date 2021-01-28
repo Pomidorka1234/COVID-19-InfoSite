@@ -6,10 +6,10 @@
  */
 function findVariance(match, sentence) {
     for(let i = 0; i < sentence.length; i++) {
-        if (sentence[i] == match[0]) {
+        if (sentence[i].toLowerCase() == match[0].toLowerCase()) {
             for (let j = 1; j < match.length; j++) {
                 i++;
-                if (sentence[i] == match[j]) {
+                if (sentence[i].toLowerCase() == match[j].toLowerCase()) {
                     if (j == match.length - 1)
                         return true;
                     continue;

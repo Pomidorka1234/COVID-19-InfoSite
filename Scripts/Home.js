@@ -93,7 +93,8 @@ class Section extends React.Component {
         super(props)
     
         this.state = {
-            visible: true
+            visible: true,
+            allow: true
         }
 
         this.toggleOptions = this.toggleOptions.bind(this);
@@ -104,11 +105,11 @@ class Section extends React.Component {
     }
 
     componentDidMount() {
-        document.addEventListener('keydown', this.removeSection);
+        document.getElementById('search-bar-click').addEventListener('click', this.removeSection);
     }
 
     componentWillUnmount() {
-        document.removeEventListener('keydown', this.removeSection);
+        document.getElementById('search-bar-click').removeEventListener('click', this.removeSection);
     }
 
     toggleOptions() {
@@ -161,13 +162,15 @@ class Section extends React.Component {
     }
 
     removeSection() {
-        //if (findVariance($("#bar").text()), this.props.information))
-            //$("#" + this.props.sectionID).css("visibility", "hidden");
+        if (!findVariance($("#bar").val(), this.props.information) && !findVariance($("#bar").val(), this.props.title))
+            this.setState({ allow: false });
+        else
+            this.setState({ allow: true });
     }
 
     render() {
         return (
-            <div id={this.props.sectionID} className='section' onClick={this.openSection}>
+            <div id={this.props.sectionID} className='section' style={{visibility: this.state.allow ? "visible" : "hidden"}} onClick={this.openSection}>
                 <div id={this.props.sectionID + "-options"} className='options'>
                     <div id={this.props.sectionID + "-search-options"} className='search-options'>
                         <i className="fas fa-search" title="search" onClick={this.toggleOptions}></i>
@@ -206,7 +209,7 @@ class Directory extends React.Component {
             hidden: false
         }
 
-        this.removeSection = this.removeSection.bind(this);
+        //this.removeSection = this.removeSection.bind(this);
     }
 
     //componentDidMount() {
