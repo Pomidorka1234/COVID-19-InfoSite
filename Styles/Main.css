@@ -340,9 +340,10 @@
 }
 
 #bottom #category-box #category .category-element {
-  width: 99%;
-  height: 40px;
+  width: 98%;
+  height: 30px;
   margin: auto;
+  margin-top: 2px;
   background-color: yellow;
 }
 

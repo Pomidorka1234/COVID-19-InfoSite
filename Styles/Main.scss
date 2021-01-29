@@ -357,10 +357,11 @@ $defB: 1px solid black;
             animation-fill-mode: forwards;
 
             .category-element {
-                width: 99%;
-                height: 40px;
+                width: 98%;
+                height: 30px;
 
                 margin: auto;
+                margin-top: 2px;
 
                 //border: $defB;
                 background-color: yellow;

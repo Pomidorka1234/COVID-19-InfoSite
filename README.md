@@ -17,7 +17,7 @@ There will be other cool facts and stuff to check out later.
 
 Later on as our website will be developing, fact checking will be allowed to be edited by users (you) and reviewed by administrators, certified users and/or algorithms.
 
-It will be possible to check out how our certified users and AI Algorithms work when reviewing and certifying fact check edits by other users so that you stay sure in our trustworthy fact checking tools.
+It will be possible to check out how our certified users and computer algorithms work when reviewing and certifying fact check edits by other users so that you stay sure in our trustworthy fact checking tools.
 
 
 ## Our fact checking process

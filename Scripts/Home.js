@@ -271,7 +271,7 @@ class Categories extends React.Component {
 /** 'Category' stateless component, part of the category-box */
 const Category = (props) => {
     return (
-        <div className='category-element' style={{backgroundImage: "linear-gradient(-45deg, green, red, blue, yellow)"}}>
+        <div className='category-element' style={{backgroundImage: "linear-gradient(-45deg, white, black, white)"}}>
             <div>{props.title}</div>
         </div>
     );
