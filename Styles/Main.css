@@ -217,7 +217,7 @@
   display: flex;
 }
 
-#top-panel #top-right #top-bottom #info-2 #info-details #info-profile div {
+#top-panel #top-right #top-bottom #info-2 #info-details #info-profile a {
   position: relative;
   margin: auto;
   cursor: pointer;
@@ -230,7 +230,7 @@
           user-select: none;
 }
 
-#top-panel #top-right #top-bottom #info-2 #info-details #info-profile div:hover {
+#top-panel #top-right #top-bottom #info-2 #info-details #info-profile a:hover {
   color: royalblue;
 }
 

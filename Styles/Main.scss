@@ -256,7 +256,7 @@ $defB: 1px solid black;
     
                         //border: $defB;
 
-                        div {
+                        a {
                             position: relative;
 
                             margin: auto;
@@ -269,7 +269,7 @@ $defB: 1px solid black;
                             user-select: none;
                         }
 
-                        div:hover { color: royalblue; }
+                        a:hover { color: royalblue; }
                     }
     
                     hr {
