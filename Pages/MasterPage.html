@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="/Styles/MasterStyle.css">
     <script src="https://kit.fontawesome.com/c0f618898f.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
@@ -11,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel" src="/Scripts/BasicMethods.js"></script>
-    <script type="text/babel" src="/Scripts/Home.js"></script>
+    <script type="text/babel" src="/Scripts/MasterScript.js"></script>
 </head>
 <body>
     <div id='top-panel'>
@@ -60,3 +61,9 @@
     </div>
 </body>
 </html>
+
+<!--//wait until the dom is loaded
+$(document).ready(function () {
+    //adds menu.html content into any "#menu" element
+    $('#menu').load('menu.html');
+});-->

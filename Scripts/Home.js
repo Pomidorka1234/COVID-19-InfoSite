@@ -212,20 +212,7 @@ class Directory extends React.Component {
         //this.removeSection = this.removeSection.bind(this);
     }
 
-    //componentDidMount() {
-        //document.addEventListener('keydown', this.removeSection);
-    //}
-
-    //componentWillUnmount() {
-        //document.removeEventListener('keydown', this.removeSection);
-    //}
-
-    //removeSection(match) {
-        //for (let i = 0; i < infoList.length; i++) {
-            //if (findVariance(match, infoList[i].information) || findVariance(match, infoList[i].title))
-                
-        //}
-    //}
+    
 
     render() {
         return (
@@ -282,14 +269,6 @@ ReactDOM.render(<Directory />, document.getElementById('content-main'));
 
 //=============================================================================================================================================================================================
 
-$("#main-info-circle").on('click', function () {
-    $("#info-title").css("visibility") == "hidden" ?
-    $("#info-title").css("visibility", "visible") :
-    $("#info-title").css("visibility", "hidden");
-});
-$("#main-info-circle-i").on("click", function() {
-    $("#info-title").css("visibility", "hidden");
-});
 
 $("#side-bar").on('click', function() {
     if ($("#category").css("width") <= "10px") {
@@ -303,22 +282,3 @@ $("#side-bar").on('click', function() {
         $(".fa-caret-right").removeClass("fa-caret-right").addClass("fa-caret-left");
     }
 });
-
-setInterval(function() {
-    let zoomSize = Math.round((window.outerWidth / window.innerWidth) * 100);
-    if (zoomSize >= 175) {
-        $("#info-2").css("display", "none");
-    }
-    else {
-        $("#info-2").css("display", "flex");
-    }
-
-    if (zoomSize > 200) {
-        $(".section").css("width", "700px");
-        $(".options").css("display", "none");
-    }
-    else {
-        $(".section").css("width", "850px");
-        $(".options").css("display", "flex");
-    }
-}, 0);

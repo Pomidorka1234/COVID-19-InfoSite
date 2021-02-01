@@ -1,4 +1,5 @@
 {
     "sqltools.connections": [],
-    "compile-hero.disable-compile-files-on-did-save-code": true
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    "liveServer.settings.multiRootWorkspaceName": "COVID-19-InfoSite"
 }
