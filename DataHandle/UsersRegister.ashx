@@ -12,6 +12,7 @@ public class RegisterUser : IHttpHandler {
         string CodeQuestion = context.Request["CodeQuestion"];
         string CodeAnswer = context.Request["CodeAnswer"];
         DBFunctions.InsertNewUser(FirstName, LastName, UserName, Password, Email, CodeQuestion, CodeAnswer);
+        
     }
 
     public bool IsReusable {
