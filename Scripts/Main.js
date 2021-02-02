@@ -162,15 +162,19 @@ class Section extends React.Component {
     }
 
     removeSection() {
-        if (!findVariance($("#bar").val(), this.props.information) && !findVariance($("#bar").val(), this.props.title))
+        if (!(findVariance(' ' + $("#bar").val(), this.props.information)) && !(findVariance(' ' + $("#bar").val(), this.props.title))) {
             this.setState({ allow: false });
-        else
+            $('#' + this.props.sectionID).css({visibility: 'hidden', width: 0, height: 0, marginBottom: 0});
+        }
+        else {
             this.setState({ allow: true });
+            $('#' + this.props.sectionID).css({visibility: 'visible', width: '850px', height: '250px', marginBottom: '40px'});
+        }
     }
 
     render() {
         return (
-            <div id={this.props.sectionID} className='section' style={{visibility: this.state.allow ? "visible" : "hidden"}} onClick={this.openSection}>
+            <div id={this.props.sectionID} className='section' onClick={this.openSection}>
                 <div id={this.props.sectionID + "-options"} className='options'>
                     <div id={this.props.sectionID + "-search-options"} className='search-options'>
                         <i className="fas fa-search" title="search" onClick={this.toggleOptions}></i>
