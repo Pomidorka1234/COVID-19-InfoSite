@@ -56,7 +56,7 @@ class TopDiv extends React.Component {
     }
 }
 
-ReactDOM.render(<TopDiv />, document.getElementById("container"));
+ReactDOM.render(<TopDiv />, document.getElementById("master-container"));
 
 
 $(document).ready(function () {

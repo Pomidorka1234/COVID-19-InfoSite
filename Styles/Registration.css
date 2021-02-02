@@ -1,0 +1,14 @@
+#registration {
+  height: 1000px;
+  display: -ms-grid;
+  display: grid;
+}
+
+#registration #registration-form {
+  width: 60%;
+  height: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=Registration.css.map */

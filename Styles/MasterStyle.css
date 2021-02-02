@@ -4,7 +4,7 @@ body {
 
 #top-panel {
   height: 150px;
-  background: linear-gradient(-45deg, #f0ce39, white, #f0ce39);
+  background: linear-gradient(-10deg, #f0ce39, white, #f0ce39);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

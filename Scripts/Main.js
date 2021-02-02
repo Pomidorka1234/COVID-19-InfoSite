@@ -131,6 +131,8 @@ class Section extends React.Component {
             $("#" + this.props.sectionID + "-information").css("height", "30px")
             .children().text(this.props.title);
 
+            $("#" + this.props.sectionID + "-information-box").css("line-height", "15px");
+
             $("#" + this.props.mediaID + "-media").toggle();
 
         }
@@ -143,6 +145,8 @@ class Section extends React.Component {
 
             $("#" + this.props.sectionID + "-information").css("height", "200px")
             .children().text(this.props.information);
+
+            $("#" + this.props.sectionID + "-information-box").css("line-height", "25px");
 
             $("#" + this.props.mediaID + "-media").toggle();
         }
