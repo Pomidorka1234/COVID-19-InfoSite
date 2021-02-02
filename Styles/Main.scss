@@ -202,6 +202,12 @@ $defB: 1px solid black;
 
             p {
                 text-align: center;
+
+                position: relative;
+                bottom: 15px;
+
+                padding-top: 15px;
+                padding-bottom: 15px;
             }
             p:hover {
                 font-weight: 600;
