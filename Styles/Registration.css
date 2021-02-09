@@ -1,14 +1,101 @@
 #registration {
-  height: 1000px;
+  height: 450px;
   display: -ms-grid;
   display: grid;
+  position: relative;
+  border-top: 1px solid black;
+  background-color: white;
+  z-index: 5;
 }
 
 #registration #registration-form {
   width: 60%;
   height: 100%;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid black;
+  z-index: 5;
+}
+
+#registration #registration-form #registration-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+#registration #registration-form #registration-container div {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 6px;
+}
+
+#registration #registration-form #registration-container div label {
+  margin: auto;
+}
+
+#registration #registration-form #registration-container div input {
+  width: 220px;
+  margin: auto;
+  text-align: center;
+  block-size: 20px;
+}
+
+#registration #registration-form #registration-container #registration-contain-1 #submit {
+  width: 80px;
+  margin: auto;
+}
+
+#registration #registration-form #registration-container #registration-contain-2 {
+  margin: unset;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#registration #registration-form #registration-container #registration-contain-2 div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+#registration #registration-form #registration-container #registration-contain-2 div input {
+  width: unset;
+  margin: auto;
 }
 /*# sourceMappingURL=Registration.css.map */

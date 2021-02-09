@@ -4,7 +4,8 @@ body {
 
 #top-panel {
   height: 150px;
-  background: linear-gradient(-10deg, #f0ce39, white, #f0ce39);
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(#00003c));
+  background: linear-gradient(0deg, white, #00003c);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,7 +65,7 @@ body {
   border: 5px solid silver;
   border-radius: 6px;
   background-color: paleturquoise;
-  z-index: 3;
+  z-index: 6;
 }
 
 #top-panel #top-left #info #info-title #info-title-p {
@@ -196,6 +197,7 @@ body {
 #top-panel #top-right #top-bottom #info-2 #info-details {
   position: relative;
   bottom: 6px;
+  z-index: 4;
 }
 
 #top-panel #top-right #top-bottom #info-2 #info-details #info-description {
@@ -219,6 +221,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 3;
 }
 
 #top-panel #top-right #top-bottom #info-2 #info-details #info-profile a {
@@ -232,6 +235,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 2;
 }
 
 #top-panel #top-right #top-bottom #info-2 #info-details #info-profile a:hover {

@@ -1,18 +1,111 @@
 $defB: 1px solid black;
 
 #registration {
-    height: 1000px;
+    height: 450px;
 
     display: grid;
 
+    position: relative;
+
     //border: $defB;
+    border-top: $defB;
+    background-color: white;
+
+    z-index: 5;
 
     #registration-form {
         width: 60%;
         height: 100%;
 
+        margin: auto;
+
+        display: flex;
+
         justify-self: center;
+        align-items: center;
 
         border: $defB;
+
+        z-index: 5;
+
+        #registration-container {
+            width: fit-content;
+
+            margin: auto;
+
+            display: flex;
+
+            font-size: 16px;
+
+            //border: $defB;
+
+            column-gap: 50px;
+
+            div {
+
+                margin: auto;
+
+                display: flex;
+                flex-direction: column;
+
+                row-gap: 6px;
+
+                label {
+                    margin: auto;
+                }
+    
+                input {
+                    width: 220px;
+    
+                    margin: auto;
+    
+                    text-align: center;
+    
+                    block-size: 20px;
+                    
+                }
+
+                
+            }
+
+            #registration-contain-1 {
+                #submit {
+                    width: 80px;
+
+                    margin: auto;
+                }
+            }
+
+            #registration-contain-2 {
+                margin: unset;
+
+                width: fit-content;
+                height: fit-content;
+
+                display: flex;
+                flex-direction: column;
+
+                //border: $defB;
+
+                div {
+                    width: 100%;
+    
+                    display: flex;
+                    flex-direction: row-reverse;
+    
+                    column-gap: 10px;
+    
+                    //border: unset;
+    
+                    input {
+                        width: unset;
+    
+                        margin: auto;
+                    }
+    
+                        
+                }
+            }
+        }
     }
 }

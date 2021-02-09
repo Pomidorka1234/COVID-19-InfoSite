@@ -18,7 +18,7 @@ class TopDiv extends React.Component {
                     </logoheader>
                     <div id='info' className='top'>
                         <i id='main-info-circle' className="fas fa-info-circle"></i>
-                        <div id='info-title' style={{visibility: "hidden"}}>
+                        <div id='info-title' style={{visibility: 'hidden'}}>
                             <p id='info-title-p'>
                                 Our web site focuses on providing the correct and precise data & facts on
                                 any topic circulating on the news or in the past few days and weeks
@@ -60,7 +60,6 @@ ReactDOM.render(<TopDiv />, document.getElementById("master-container"));
 
 
 $(document).ready(function () {
-    //adds menu.html content into any "#menu" element
     $("#main-info-circle").on('click', function () {
         $("#info-title").css("visibility") == "hidden" ?
         $("#info-title").css("visibility", "visible") :
