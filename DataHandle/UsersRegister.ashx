@@ -1,3 +1,6 @@
+<%@ WebHandler Language="C#" Class="RegisterUser" %>
+
+
 using System;
 using System.Web;
 

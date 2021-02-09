@@ -5,15 +5,28 @@ class TopDiv extends React.Component {
         this.state = {
              
         }
+
+        //this.redirect = this.redirect.bind(this);
+    }
+
+    componentDidMount() {
+        document.getElementById('logo').addEventListener('click', this.redirect);
+    }
+
+    componentWillUnmount() {
+        document.getElementById('logo').removeEventListener('click', this.redirect);
     }
     
+    redirect() {
+        window.open('Main_templ.html', '_self');
+    }
 
     render() {
         return (
             <div id='top-panel'>
                 <div id='top-left'>
                     <logoheader id='logo-header' className='top'>
-                        <h1 id='logo'>Deboonka</h1>
+                        <h1 id='logo' href='Main_templ.html'>Deboonka</h1>
                         <h6>Fact checking the official narrative</h6>
                     </logoheader>
                     <div id='info' className='top'>

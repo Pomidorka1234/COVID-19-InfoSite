@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--<script type="text/javascript" src="https://c2acx154.caspio.com/dp/2357900012e25a8977894215bfa5/emb"></script>-->
     <script>
         function onSubmit(token) {
           document.getElementById("demo-form").submit();
@@ -26,37 +27,45 @@
 <body>
     <div id='master-container'></div>
     <div id='registration'>
-        <form id='registration-form'>
+        <form id='registration-form' method="POST" action="https://c2acx154.caspio.com/dp/2357900012e25a8977894215bfa5?cbUI=1">
+            <input type="hidden" name="cbUniqueFormId" id="cbUniqueFormId_14642ab0476412" value="_14642ab0476412">
+            <input type="hidden" name="AppKey" value="2357900012e25a8977894215bfa5">
+            <input type="hidden" name="PrevPageID" value="3">
+            <input type="hidden" name="cbPageType" value="Insert">
+            <input type="hidden" name="ClientQueryString" value="">
+            <input type="hidden" name="pathname" value="https://c2acx154.caspio.com/dp/2357900012e25a8977894215bfa5">
+            <input type="hidden" name="Mod0InsertRecord" value="1">
+            <input type="hidden" name="Mod0InsertRecordPageID" value="3">
+            <input type="hidden" name="cbAP" value="Caspio">
             <div id='registration-container'>
                 <div id='registration-contain-1'>
-                    <label for='name'>Enter your name</label>
-                    <input id='name' name='name' type='text'> <br>
+                    <label for='InsertRecordusername'>Enter your username</label>
+                    <input id='InsertRecordusername' name='InsertRecordusername' type='text' maxlength="255"> <br>
 
-                    <label for='password'>Enter your password</label>
-                    <input id='password' name='password' type='text'> <br>
+                    <label for='InsertRecordpassword'>Enter your password</label>
+                    <input id='InsertRecordpassword' name='InsertRecordpassword' type='password' maxlength="64000"> <br>
 
-                    <label for='password-r'>Enter password again</label>
-                    <input id='password' name='password-r' type='text'> <br>
-
-                    <button id='submit' class="g-recaptcha" data-sitekey="6LdboVAaAAAAAEG-B-fhgSIyjxsGfwnjMQ4PVc7v" data-callback='onSubmit' data-action='submit'>Submit</button>
+                    <input id='submit' class="g-recaptcha" data-callback='onSubmit' data-action='submit' type="submit">
                 </div>
                 <div id='registration-contain-2'>
-                    <label for='mail'>Enter your mail address</label>
-                    <input id='mail' name='mail' type='text'> <br>
+                    <label for='InsertRecordmail'>Enter your mail address</label>
+                    <input id='InsertRecordmail' name='InsertRecordmail' type='text' maxlength="255"> <br>
 
                     <div>                        
-                        <label for='notifications'>Allow notifications for your mail?</label>
-                        <input id='notifications' name='notifications' type="checkbox">
+                        <label for='InsertRecordnotification'>Allow notifications for your mail?</label>
+                        
+                        <input id='InsertRecordnotification' name='InsertRecordnotification' type="checkbox" value='Y'>
                     </div>
 
                     <div>
                         <label for='accept'>Accept terms of service sited <br> in the information page http://...</label>
-                        <input id='accept' name='accept' type="checkbox">
+                        <input id='accept' name='accept' type="checkbox" required>
                     </div>
 
                 </div>
             </div>
         </form>
     </div>
+
 </body>
 </html>

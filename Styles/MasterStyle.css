@@ -28,6 +28,7 @@ body {
 #top-panel #top-left #logo-header h1 {
   position: relative;
   bottom: 30px;
+  cursor: pointer;
 }
 
 #top-panel #top-left #logo-header h6 {
