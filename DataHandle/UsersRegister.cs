@@ -1,6 +1,3 @@
-<%@ WebHandler Language="C#" Class="RegisterUser" %>
-
-
 using System;
 using System.Web;
 
@@ -15,6 +12,7 @@ public class RegisterUser : IHttpHandler {
         string CodeQuestion = context.Request["CodeQuestion"];
         string CodeAnswer = context.Request["CodeAnswer"];
         DBFunctions.InsertNewUser(FirstName, LastName, UserName, Password, Email, CodeQuestion, CodeAnswer);
+        
         
     }
 
