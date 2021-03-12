@@ -30,8 +30,9 @@ class TopDiv extends React.Component {
                         <h6>Fact checking the official narrative</h6>
                     </logoheader>
                     <div id='info' className='top'>
-                        <i id='main-info-circle' className="fas fa-info-circle"></i>
+                        
                         <div id='info-title' style={{visibility: 'hidden'}}>
+                            <i id='main-info-circle' className="fas fa-info-circle"></i>
                             <p id='info-title-p'>
                                 Our web site focuses on providing the correct and precise data & facts on
                                 any topic circulating on the news or in the past few days and weeks
@@ -57,7 +58,7 @@ class TopDiv extends React.Component {
                             <div id='info-details'>
                                 <p id='info-description'>Help us inform the public</p> <hr />
                                 <div id='info-profile'>
-                                    <a>Login</a>
+                                    <a href="">Login</a>
                                     <a href="Registration_templ.html">Register</a>
                                 </div>
                             </div>
